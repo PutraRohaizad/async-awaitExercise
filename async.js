@@ -1,3 +1,6 @@
+const fetch = require("node-fetch");
+
+
 // Exercise 1
 // function result(){
 //     setTimeout( async() => {
@@ -10,59 +13,42 @@
 ////////////////////////////////////////////
 
 // Exercise 2
-function A(){
-    setTimeout( async () => {
-        let error = false;
-            if(!error){
-                await console.log('Good')
-            }
-            else{
-                await console.log('Error')
-            }
-            },500)
-    }
+// function A(){
+//     setTimeout( () => {
+//         let error = false;
+//             if(!error){
+//                  console.log('Good')
+//             }
+//             else{
+//                  console.log('Error')
+//             }
+//             },500)
+//     }
 
-    async function C() {
-        await console.log('nahhh')
-}
+//     function B(){
+//         setTimeout(() => {
+//             console.log('nahhh')
+//         }, 300)
+//     }
 
-A();
-C();
+//     async function C() {
+//         await B();
+//         A();
+// }
+
+// C();
 
 ////////////////////////////////////////////
 
-// Exercise 2
-// const workers =[
-// {name:'Ali', position: 'HR'},
-// {name:'Abu', position: 'IT'}
-// ]
+// Exercise 3 Fetch Api
 
-// function B(){
+async function fetchUser() {
 
-// return new Promise ((resolve,reject) =>{
+const res = await fetch('https://jsonplaceholder.typicode.com/users');
 
-// let error = false;
+const data = await res.json();
 
-// if(!error){
-//     resolve();
-// }
-// else{
-//     reject('Error');
-// }
-// });
-// }
+    console.log(data);
+}
 
-// function info(){
-// setTimeout(() =>{
-// for(var i in workers){
-//     var abc = workers[i].name
-//     var xyz = workers[i].position
-//     console.log(abc);
-//     console.log(xyz);
-// }
-// }, 700)
-// }
-
-// B()
-// .then(info)
-// .catch(err => console.log(err));
+fetchUser();
