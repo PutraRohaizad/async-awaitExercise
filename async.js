@@ -1,42 +1,41 @@
 const fetch = require("node-fetch");
 
-
 // Exercise 1
-// function result(){
-//     setTimeout( async() => {
-//         let z = 'Ok'; 
-//         await console.log(z)
-//     }, 5000)
-// };
-// result();
+function result(){
+    setTimeout( async() => {
+        let z = 'Ok'; 
+        await console.log(z)
+    }, 5000)
+};
+result();
 
 ////////////////////////////////////////////
 
 // Exercise 2
-// function A(){
-//     setTimeout( () => {
-//         let error = false;
-//             if(!error){
-//                  console.log('Good')
-//             }
-//             else{
-//                  console.log('Error')
-//             }
-//             },500)
-//     }
+function A(){
+    setTimeout( () => {
+        let error = false;
+            if(!error){
+                 console.log('Good')
+            }
+            else{
+                 console.log('Error')
+            }
+            },500)
+    }
 
-//     function B(){
-//         setTimeout(() => {
-//             console.log('nahhh')
-//         }, 300)
-//     }
+    function B(){
+        setTimeout(() => {
+            console.log('nahhh')
+        }, 300)
+    }
 
-//     async function C() {
-//         await B();
-//         A();
-// }
+    async function C() {
+        await B();
+        A();
+}
 
-// C();
+C();
 
 ////////////////////////////////////////////
 
